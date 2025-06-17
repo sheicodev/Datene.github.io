@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+    text-decoration: none;
 }
 @import url('https://fonts.cdnfonts.com/css/shablagoo');
 #head_inner{
-    width: 25%;
-    padding: 10px;  
+    width: 25%;  
     text-align: center;
 }
 #head{
@@ -19,7 +19,6 @@
 }
 #web_name{
     font-size: 4em;
-    padding: 5px;
     font-weight: bold;
     font-family: 'Shablagoo 3D Italic', sans-serif;
 }
@@ -33,26 +32,30 @@ body {
     display: flex;
     margin: 0 auto;
     padding: 0px;
-    height: 600px;
+    height: 650px;
 }
 .content{
     display: flex;
     width: 70%;
-    height: 600px;
+    height: 650px;
 }
 .head_right{
     display: flex;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     box-sizing: border-box;
     flex-direction: column;
     width: 30%;
-    height: 600px;
+    height: 650px;
 }
-.navbar {
+.pro_icon {
     display: flex;
     align-items: center;
     padding: 10px 20px;
     background: linear-gradient(90deg, #fc466b, #3f5efb);
     color: white;
+    gap: 20px;
 }
 
 .profile {
@@ -90,38 +93,41 @@ body {
 }
 .header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
         
 .header h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: #ff4757;
-    margin-bottom: 10px;
 }
-        
+.pro_pic{
+    margin: 20px 32% 10px 32%;
+    height: 30%;
+    border-radius: 10px  ;
+    background: linear-gradient(90deg, #fc466b, #3f5efb);
+}       
 .matches-section {
-    background-color: white;
     border-radius: 10px;
-    padding: 20px;
+    padding: 0 20%;
     margin-bottom: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
         
 .matches-section p {
-    font-size: 1.2rem;
     color: #666;
     margin-bottom: 20px;
 }
-        
+a h2{
+    color: #ffffff  ;
+}
 .profile-card {
   display: flex;
   background-color: white;
   border-radius: 10px;
   flex-direction: column;
   margin-bottom: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  height: 600px;
+  box-shadow: 0 2px 10px rgba(123, 118, 118, 0.1);
+  height: 650px;
   position: relative; 
   overflow: hidden;
   justify-content: center;
@@ -141,13 +147,13 @@ body {
 .profile-name {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   color: #333;
 }
 
 .picture {
   width: 50%;
-  height: 80%;  /* Giảm chiều cao để chừa chỗ cho tên */
+  height: 90%;  /* Giảm chiều cao để chừa chỗ cho tên */
   border: black solid 5px;
   border-radius: 20px;
   overflow: hidden;

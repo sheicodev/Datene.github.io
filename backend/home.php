@@ -1,10 +1,25 @@
 <?php
-session_start(); // Phải có để đọc dữ liệu session
+// require_once 'db.php';
+session_start();
 if (!isset($_SESSION['user_profile'])) {
     header("Location: create_profile.php"); // hoặc index.php nếu đó là form tạo profile
     exit;
 }
-$profile = $_SESSION['user_profile'] ?? null;
+// $profile = $_SESSION['user_profile'] ?? null;
+// // Lấy thông tin người dùng
+// $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
+// $stmt->execute([$_SESSION['user_id']]);
+// $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+// // Lấy ảnh gallery
+// $stmt = $pdo->prepare("SELECT * FROM user_images WHERE user_id = ?");
+// $stmt->execute([$_SESSION['user_id']]);
+// $gallery = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// // Lấy sở thích
+// $stmt = $pdo->prepare("SELECT interest FROM user_interests WHERE user_id = ?");
+// $stmt->execute([$_SESSION['user_id']]);
+// $interests = $stmt->fetchAll(PDO::FETCH_COLUMN);
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,9 +39,7 @@ $profile = $_SESSION['user_profile'] ?? null;
         <div id="head_inner">
             </div>
         <div id="head_inner">
-            <div>
-
-            </div>
+            
         </div>
     </div>
     <div class="container">
@@ -64,11 +77,17 @@ $profile = $_SESSION['user_profile'] ?? null;
             <div class="pro_icon">
                 <div class="your_profile">
                     <div class="profile">
-                        <?php if ($profile): ?>
-                            <img src="<?= htmlspecialchars($profile['avatar']) ?>" alt="Avatar" width="40" height="40" style="border-radius: 50%;">
-                            <h2><?= htmlspecialchars($profile['name']) ?></h2>
+                        <?php if (isset($_SESSION['user_profile'])): 
+                            $profile = $_SESSION['user_profile'];
+                        ?>
+                            <?php if (!empty($profile['avatar'])): ?>
+                                <a href="account.php"> <img src="<?= htmlspecialchars($profile['avatar']) ?>" alt="Avatar" width="40" height="40" style="border-radius: 50%;"></a>
+                            <?php else: ?>
+                                <a href="account.php"><img src="../images/default-avatar.jpg" alt="Avatar" width="40" height="40" style="border-radius: 50%;"></a>
+                            <?php endif; ?>
+                            <a href="account.php"><h2><?= htmlspecialchars($profile['name'] ?? 'No name') ?></h2></a>
                         <?php else: ?>
-                            <p>No profile loaded.</p>
+                            <p>No profile loaded. Please create a profile first.</p>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -79,7 +98,8 @@ $profile = $_SESSION['user_profile'] ?? null;
                     <div class="icon-circle"><i class="fas fa-shield-alt"></i></div>
                 </div>
             </div>
-            
+            <div class="nav"></div>
+            <div class="pro_pic"></div>
             <div class="header">
                 <h1>Start Matching</h1>
             </div>

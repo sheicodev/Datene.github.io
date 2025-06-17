@@ -78,6 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo "<h3>⛔ Invalid request method.</h3>";
 }
- header("Location: home.php");
+    header("Location: home.php");
     exit;
 ?>
