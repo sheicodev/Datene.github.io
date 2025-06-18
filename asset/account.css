@@ -28,42 +28,94 @@ body, html {
     z-index: 1000;
     background-color: rgb(252, 243, 231);
 }
-#container {
-    display: flex;
-    height: calc(100vh - 80px);
-}
 #web_name{
     font-size: 4em;
     padding: 5px;
     font-weight: bold;
     font-family: 'Shablagoo 3D Italic', sans-serif;
 }
-.name{
-    text-align: center;
-    font-family: 'Minal', sans-serif;           
-    margin-top: 30px ;
-    font-size: 2.5em;
+.container{
+    display: flex;
+}
+.sidebar {
+    width: 250px;
+    background-color: #ffafff;
+    padding: 30px 20px;
+}
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.sidebar ul {
+    list-style: none;
+}
+.sidebar li {
+    padding: 12px 0;
+    font-size: 14px;
+    color: #000000;
+    cursor: pointer;
+}
+.sidebar li:first-child {
+    color: red;
+    font-weight: bold;
 }
 
-#sidebar {
-    background-color: #ff4d4d;
-    width: 200px;
-    padding: 10px 0;
-   }
-.sidebar-item {
-    background-color: #ddd;
-    height: 50px;
-    margin: 10px;
-}
-#main-content {
+.main-content {
     flex: 1;
-    background-color: #f9f9f9;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    padding: 40px;
+    background-color: #ffafff;
+    overflow-y: auto;
 }
-.content-box {
-    background-color: #ddd;
-    height: 60px;
+.box {
+    background-color: #ff87ff;
+    padding: 25px 30px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+.box h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.box p {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.input-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.input-field {  
+    flex: 1;
+}
+.input-field label {
+    display: block;
+    font-size: 12px;
+    font-size: 1.05em;
+    color: #000000;
+    margin-bottom: 5px;
+}
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff55ff;;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+.save-btn {
+    padding: 10px 20px;
+    background-color: #ffafff;
+    color: #777;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+.highlight {
+    color: #8888ff;
+    font-size: 12px;
+}
+a {
+    color: rgb(0, 21, 255);
+    text-decoration: none;
 }
