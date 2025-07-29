@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DATENE</title>
-    <link rel="stylesheet" href="../asset/index.css">
+    <link rel="stylesheet" href="asset/index.css">
     <link href="https://fonts.cdnfonts.com/css/shablagoo" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/retro-groove" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/adventrue" rel="stylesheet">
@@ -30,7 +30,7 @@
     </div>
     <div id="middle" class="section">
         <div id="middle_inner_left">
-            <img src="../images/love.PNG" alt="Love Image">
+            <img src="images/love.PNG" alt="Love Image">
         </div>
         <div id="middle_inner_right">
             <div id="bold_p">
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div id="middle_2_inner_right">
-            <img src="../images/loving.jpg" alt="Love Image">
+            <img src="images/loving.jpg" alt="Love Image">
         </div>
     </div>
     <div id="middle_3" class="section">
@@ -71,14 +71,14 @@
                 </div>
                 <div id="middle_3_right">
                     <div class="image-container" id="middle_3_right_img1">
-                        <img src="../images/girl.webp" alt="Girl">
+                        <img src="images/girl.webp" alt="Girl">
                         <div class="message-box">
                             🧡 Want a date with me?
                         </div>
                     </div>
 
                     <div class="image-container" id="middle_3_right_img2">
-                        <img src="../images/ryan gostling.jpg" alt="Ryan Gosling">
+                        <img src="images/ryan gostling.jpg" alt="Ryan Gosling">
                         <div class="message-box">
                             💖 Sure i'll be the one?
                     </div>
