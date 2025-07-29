@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0b9ff;
+}
+@import url('https://fonts.cdnfonts.com/css/shablagoo');
+@import url('https://fonts.cdnfonts.com/css/retro-groove');
+@import url('https://fonts.cdnfonts.com/css/adventrue');
+@import url('https://fonts.cdnfonts.com/css/slab-tall-x');
+@import url('https://fonts.cdnfonts.com/css/minal');
+@import url('https://fonts.cdnfonts.com/css/kynthia');
+body, html {
+    margin: 0;
+    padding: 0;
+}
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+#head_inner{
+    width: 25%;
+    padding: 10px;  
+    text-align: center;
+}
+#head{
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(252, 243, 231);
+}
+a {
+    text-decoration: none;
+    color: inherit; /* Giữ nguyên màu giống cha */
+}
+#web_name{
+    font-size: 4em;
+    padding: 5px;
+    font-weight: bold;
+    font-family: 'Shablagoo 3D Italic', sans-serif;
+}
+.name{
+    text-align: center;
+    font-family: 'Minal', sans-serif;           
+    margin-top: 30px ;
+    font-size: 2.5em;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Left Column - Profile Picture */
+.profile_pic {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-wrapper {
+    width: 200px;
+    height: 200px;
+    border: 3px dashed #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7b7b7b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.avatar-wrapper:hover {
+    border-color: #666;
+    transform: scale(1.02);
+}
+
+#avatarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile_pic p {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Middle Column - Form Info */
+.info {
+    width: 48%;
+    padding: 0 10px;
+}
+
+.info label {
+    display: block;
+    font-size: 1.3em;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+.info input[type="text"],
+.info input[type="email"],
+.info input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: border 0.3s;
+}
+
+.info input:focus {
+    border-color: #888;
+    outline: none;
+}
+
+.birthday {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.birthday div {
+    flex: 1;
+}
+
+.birthday input {
+    width: 100%;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 25px 0 15px;
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.button {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #333;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: 'Minal', sans-serif;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background: #f0f0f0;
+}
+
+.button.selected {
+    background: #333;
+    color: white;
+}
+
+.checkbox-group {
+    margin: 20px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+}
+
+.relationship-button {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    background: white;
+    border: 2px solid #888;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.relationship-button:hover {
+    background: #f8f8f8;
+}
+
+.button_container {
+    margin-top: 30px;
+}
+
+.save_button {
+    width: 100%;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.save_button:hover {
+    background: #45a049;
+}
+
+/* Right Column - Sub Pictures */
+.sub_pic {
+    width: 30%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.avatar-container {
+    position: relative;
+    aspect-ratio: 2/3;
+    background: #221010;
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.add-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.grid_text h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    color: #555;
+}
+
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+}
+
+.relationship-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.relationship-option {
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.relationship-option:hover {
+    background: #eee;
+}
+
+.relationship-option.selected {
+    background: #4CAF50;
+    color: white;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cancel-button {
+    padding: 10px 20px;
+    background: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    form {
+        flex-direction: column;
+    }
+    
+    .profile_pic,
+    .info,
+    .sub_pic {
+        width: 100%;
+    }
+    
+    .profile_pic {
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    
+    .sub_pic {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .relationship-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .birthday {
+        flex-direction: column;
+    }
+}

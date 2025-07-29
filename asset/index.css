@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+@import url('https://fonts.cdnfonts.com/css/shablagoo');
+@import url('https://fonts.cdnfonts.com/css/retro-groove');
+@import url('https://fonts.cdnfonts.com/css/adventrue');
+@import url('https://fonts.cdnfonts.com/css/slab-tall-x');
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(264, 26%, 49%);
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+#head_inner{
+    width: 25%;
+    padding: 10px;  
+    text-align: center;
+}
+#head{
+    background-color: hsl(85, 55%, 94%);
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(252, 243, 231);
+}
+#web_name{
+    font-size: 5em;
+    padding: 5px;
+    font-weight: bold;
+    font-family: 'Shablagoo 3D Italic', sans-serif;
+}
+.section {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 
+    opacity 1s ease,
+    transform 1s ease,
+    background-color 1s ease;
+  background-color: black; /* Nền ban đầu */
+  color: white; /* Text trắng để dễ đọc khi nền đen */
+}
+
+/* Khi hiện lên */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  background-color: white; /* Nền chuyển thành trắng */
+  color: black; /* Text về lại màu đen */
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+#middle {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  background-color: rgb(220, 199, 252);
+}
+
+/* Cả 2 div đều đè lên nhau lúc đầu */
+#middle_inner_left,
+#middle_inner_right {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease-in-out;
+}
+
+/* Bắt đầu từ giữa */
+#middle_inner_left {
+  left: 50%;
+  z-index: 2;
+}
+
+#middle_inner_right {
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column; 
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Khi hiện ra (scroll tới), tách ra 2 bên */
+#middle.visible #middle_inner_left {
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+#middle.visible #middle_inner_right {
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+/* Inner content style */
+#middle_inner_left img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border: 3px solid black;
+}
+
+#bold_p {
+    font-size: 2.3em;
+    font-weight: bold;
+    color: red;
+    font-family: 'Retro Groove', sans-serif;
+    height: 25%;
+}
+
+#light_p {
+  font-size: 1.5em;
+  font-family: 'Adventrue', sans-serif;
+  padding-right: 80px;
+    padding-left: 80px;
+    height: 25%;
+  margin-bottom: 20px;
+}
+
+.login {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.login a {
+  padding: 10px 20px;
+  background: white;
+  border-radius: 30px;
+  color: #a020f0;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #a020f0;
+  transition: 0.3s;
+}
+
+.login a:hover {
+  background: #a020f0;
+  color: white;
+}
+
+
+.google_login a,
+.facebook_login a {
+    text-decoration: none;
+    color: #a600ff;
+    font-weight: bold;
+}
+.google_login{
+    width: 50%;
+}
+.facebook_login{
+    width: 50%;
+}
+a:hover{
+    color: hwb(306 0% 5% / 0.785);
+}
+a:active{
+    color: hwb(359 0% 5%);
+}
+#middle_2{
+    display: flex;
+    height: 500px;
+    background-color: rgb(199, 169, 244);
+}
+#middle_2_inner_left,
+#middle_2_inner_right {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease-in-out;
+}
+#middle_2_inner_left {
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column; 
+    justify-content: space-between;
+    gap: 40px;
+}
+
+#middle_2_inner_right {
+  left: 50%;
+  z-index: 2;
+}
+#middle_2.visible #middle_2_inner_left {
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+#middle_2.visible #middle_2_inner_right {
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+#middle_2_inner_right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#middle_3{
+    display: flex;
+    height: 600px;
+    background-color: rgb(220, 199, 252);
+}
+#middle_3_container_left{
+    width: 60%;
+    display: flex;
+}
+#middle_3_left{
+    width: 40%;
+}
+#middle_3_right{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.message-box {
+font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translateY(-50%) scale(0.8); /* bắt đầu thu nhỏ */
+  margin-left: 10px;
+
+  background-color: white;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  white-space: nowrap;
+
+  opacity: 0; /* bắt đầu ẩn */
+  pointer-events: none; /* ngăn tương tác khi ẩn */
+
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.image-container:hover .message-box {
+  opacity: 1;
+  transform: translateY(-50%) scale(1); /* phóng to về kích thước bình thường */
+  pointer-events: auto; /* cho tương tác nếu cần */
+}
+
+#middle_3_right_img1{
+    height: 50%;
+}
+#middle_3_right_img2{
+    height: 50%;
+}
+#middle_3_right_img1 img, #middle_3_right_img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    border-radius: 10px;
+}
+#middle_3_right_img1 img:hover,
+#middle_3_right_img2 img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); 
+    filter: brightness(1.1) contrast(1.05); 
+    cursor: pointer;
+}
+#middle_3_inner_right{
+    width: 40%;
+    margin: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    #middle,
+    #middle_2,
+    #middle_3 {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    #middle_inner_left, 
+    #middle_2_inner_right,
+    #middle_3_inner_right,
+    #middle_inner_right {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .login {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #bold_p p, #light_p p {
+        padding: 0 20px;
+    }
+}
