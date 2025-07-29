@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 session_start();
 
 if (!isset($_SESSION['email'])) {
-    header("Location: http://localhost/DATENE/backend/index.php");
+    header("Location: http://localhost/DATENE/index.php");
     exit;
 }
 

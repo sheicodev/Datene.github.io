@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['email'])) {
-    header("Location: http://localhost/DATENE/backend/index.php");
+    header("Location: http://localhost/DATENE/index.php");
     exit;
 }
 ?>
@@ -19,7 +19,7 @@ if (!isset($_SESSION['email'])) {
 <body>
     <div id="head">
         <div id="head_inner">
-            <a href="http://localhost/DATENE/backend/index.php" id="web_name">DATENE</a>
+            <a href="http://localhost/DATENE/index.php" id="web_name">DATENE</a>
         </div>
         <div id="head_inner">
             </div>
